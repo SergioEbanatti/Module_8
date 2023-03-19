@@ -45,16 +45,10 @@ namespace _8_2
 
                         TextNKey("Запись создана. Добавить ещё одну запись? н/д\n");
                     }
-                    else
-                    {
-                        TextNKey($"Номер {_phoneNumber} уже есть в телефонной книге, нельзя добавить такой же номер.\n" +
-                            $"Попробовать снова? н/д\n");
-                    }
+                    else TextNKey($"Номер {_phoneNumber} уже есть в телефонной книге," +
+                        $" нельзя добавить такой же номер.\nПопробовать снова? н/д\n");
                 }
-                else
-                {
-                    _key = 'н';
-                }
+                else _key = 'н';
 
                 Console.Clear();
 
@@ -75,18 +69,11 @@ namespace _8_2
                 if (PhoneNumberCheck())
                 {
                     if (_phoneBook.TryGetValue(_phoneNumber, out _ownerFullName))      //Выполняем поиск по номеру и возвращаем ФИО владельца
-                    {
                         TextNKey($"Запись найдена, это {_ownerFullName}. Выполнить ещё один поиск? н/д\n");
-                    }
                     else
-                    {
                         TextNKey("Запись не найдена, попробовать снова? н/д\n");
-                    }
                 }
-                else
-                {
-                    _key = 'н';
-                }
+                else _key = 'н';
 
             } while (char.ToLower(_key) == 'д');
             Console.Clear();
@@ -106,13 +93,10 @@ namespace _8_2
                 _userInput = Console.ReadLine();
 
                 if (ulong.TryParse(_userInput, out _phoneNumber))     //Проверяем преобразуется ли строка в ulong, если да, то записываем результат
-                {
                     return true;
-                }
                 else
-                {
                     TextNKey("Вы ввели некорректные данные, попробовать снова? н/д\n");
-                }
+
             } while (char.ToLower(_key) == 'д');
 
             return false;
