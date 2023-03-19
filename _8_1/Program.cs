@@ -14,7 +14,7 @@ namespace _8_1
         private static void Main()
         {
             int randomizeMinValue = 0;      //Минимальное значение значение для рандомайзера.
-            int randomizeMaxValue = 100;        //Максимальное значение значение для рандомайзера.
+            int randomizeMaxValue = 100;    //Максимальное значение значение для рандомайзера.
             int deleteMinValue = 25;        //Миниальное значение для удаления.
             int deleteMaxValue = 50;        //Максимальное значение для удаления.
 
@@ -30,7 +30,7 @@ namespace _8_1
         /// Заполняет коллекции случайными значениями в заданном диапазоне чисел.
         /// </summary>
         /// <param name="randomizeNumbersList">Заполняемая коллекция.</param>
-        /// <param name="minValue">Минмальное значение диапазона.</param>
+        /// <param name="minValue">Минимальное значение диапазона.</param>
         /// <param name="maxValue">Максимальное значение диапазона.</param>
         private static void FillListNumbers(List<int> randomizeNumbersList, int minValue, int maxValue)
         {
