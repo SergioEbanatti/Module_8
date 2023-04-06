@@ -19,8 +19,8 @@ namespace _8_2
         {
             Console.WriteLine("\t\t\tТелефонная книга\n\n");
             Console.WriteLine("Заполнение телефонной книги:");
-            CreatePhoneBook();
-            SearchOwnerByNumber();
+            CreatePhoneBook();      //Создаем телефонную книгу и заполняем данными
+            SearchOwnerByNumber();      //Ищем владельца по номеру телефона
             Console.ReadKey();
         }
 

@@ -21,8 +21,6 @@ namespace _8_3
             Console.WriteLine("\t\t\tВывод полученной коллекции:\n\n");
             ShowHashSet();      //Выводим коллекцию на экран
             Console.ReadKey();
-
-
         }
 
         /// <summary>
@@ -65,8 +63,8 @@ namespace _8_3
         /// </summary>
         static private void ShowHashSet()
         {
-            foreach (var e in _hashSet) 
-                Console.Write($"{e} "); 
+            foreach (var e in _hashSet)
+                Console.Write($"{e} ");
         }
 
         /// <summary>
